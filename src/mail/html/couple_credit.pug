@@ -1,0 +1,149 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Pagare casado
+style.
+  html,
+  body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+  .h-title {
+  text-align: center;
+  }
+  .p-content {
+  font-size: 13px;
+  text-align: justify;
+  }
+  .col-details {
+  width: 50%;
+  }
+  .sign-div {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 13px;
+  }
+  .couple-div {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  }
+  .col-sign {
+  width: 100px;
+  }
+h3.h-title PRENDAR ECUADOR CASA DE EMPE&Ntilde;O
+h4.h-title PAGAR&Eacute; A LA ORDEN
+table(style='width: 100%')
+  tbody
+    tr
+      td.col-details Pagar&eacute;: #{idPrestamo}
+      td.col-details Tasa: #{tasaInteres}%
+    tr
+      td.col-details Solicitud: #{idSolicitud}
+      td.col-details Valor USD: $#{monto}
+    tr
+      td N&ordm;. Cliente: #{idCliente}
+      td Oficina: #{canton}
+p.p-content
+  | Debo y pagar&eacute; solidaria e incondicionalmente a #{plazoDias} d&iacute;as de la
+  | fecha, yo el (la) se&ntilde;or #{nombreDeudor} portador de la cedula de
+  | ciudadan&iacute;a #{identificacion} y el (la) se&ntilde;or(a) #{nombreConyuge}
+  | portador(a) de la c&eacute;dula de ciudadan&iacute;a #{identificacionConyuge} por mis
+  | propios y personales derechos, en esta ciudad, o en el lugar en que se me
+  | solicite, a la orden de la Sociedad Civil y de Comercio &ldquo;PRENDAR ECUADOR
+  | CASA DE EMPE&Ntilde;O SCC&rdquo; Con RUC. 1792320321001, representada por su Gerente
+  | General, la suma de #{montoLetras} ($#{monto}), valor recibido en calidad
+  | de Cr&eacute;dito mercantil, en dinero en efectivo y a mi entera satisfacci&oacute;n.
+  | Este valor se pagar&aacute; en dinero efectivo con recursos l&iacute;citos que en ning&uacute;n
+  | caso han sido generados por operaciones Il&iacute;citas, especialmente no por
+  | aquellas reprimidas por la Ley sobre Sustancias Estupefacientes y
+  | Psicotr&oacute;picas, eximiendo a la Sociedad Civil y de Comercio &ldquo;PRENDAR
+  | ECUADOR CASA DE EMPE&Ntilde;O SCC&rdquo; Con RUC. 1792320321001, de cualquier
+  | responsabilidad en la materia. Este valor se pagar&aacute; el #{fechaPagoLetras}
+  | Si el valor del cr&eacute;dito adeudado no fuese pagado al vencimiento, total o
+  | parcialmente, la cantidad de capital no pagada devengar&aacute; intereses de
+  | mora. La tasa de inter&eacute;s de mora ser&aacute; la que resulte de aplicar un recargo
+  | del 10% (1.1 veces) sobre la tasa de inter&eacute;s efectiva m&aacute;xima, computado
+  | desde el primer d&iacute;a de la mora hasta el d&iacute;a en que se efect&uacute;e el pago. El
+  | inter&eacute;s de mora se calcular&aacute; con base en un a&ntilde;o de 360 d&iacute;as. Sin perjuicio
+  | de ello, en caso de mora de una parte o de la totalidad del cr&eacute;dito, la
+  | Sociedad Civil y de &ldquo;PRENDAR ECUADOR CASA DE EMPE&Ntilde;O SCC&rdquo;con RUC.
+  | 1792320321001, podr&aacute; declarar vencida la obligaci&oacute;n y proceder al cobro de
+  | todos los valores efectivamente adeudados al momento de la mora. El pago
+  | se realizar&aacute; en la fecha de vencimiento del cr&eacute;dito en d&oacute;lares de los
+  | Estados Unidos de Am&eacute;rica, en fondos de disponibilidad inmediata, libres
+  | de y sin deducci&oacute;n alguna por grav&aacute;menes, deducciones, cargos o
+  | retenciones, salvo aquellas de car&aacute;cter tributario seg&uacute;n la legislaci&oacute;n
+  | vigente.
+p.p-content
+  | Para caso de juicio, renuncio fuero y domicilio y me someto expresamente a
+  | los jueces competentes de la Ciudad de #{ciudad}. Me obligo a pagar las
+  | costas y gastos judiciales y/o extrajudiciales que se originasen en el
+  | cobro aun antes de sentencia, que sean necesarios para asegurar la
+  | legalidad y ejecutoriedad de este Pagar&eacute; a la Orden y para recaudar los
+  | valores adeudados, incluyendo honorarios legales as&iacute; como otras perdidas y
+  | da&ntilde;os causados por el incumplimiento. El pago no podr&aacute; hacerse por partes
+  | ni a&uacute;n por mis herederos o sucesores. Al fiel cumplimiento de lo
+  | estipulado me obligo (amos) con todos mis (nuestros) bienes presentes y
+  | futuros. Sin protesto. Ex&iacute;mase de presentaci&oacute;n para el pago y de aviso por
+  | falta de pago.
+p.p-content #{ciudad}, #{fechaAdjudicacion}
+p.p-content Por ello el(los) Deudor(es)
+.sign-div
+  .couple-div
+    div(style='width: 50%')
+      table
+        tbody
+          tr
+            td.col-sign f.
+            td ___________________
+          tr
+            td.col-sign Nombre:
+            td #{nombreDeudor}
+          tr
+            td.col-sign C&eacute;dula:
+            td #{identificacionDeudor}
+    div(style='width: 50%')
+      table
+        tbody
+          tr
+            td.col-sign f.
+            td ___________________
+          tr
+            td.col-sign Nombre:
+            td #{nombreConyuge}
+          tr
+            td.col-sign C&eacute;dula:
+            td #{identificacionConyuge}
+p.p-content #{ciudad}, #{fechaAdjudicacion}
+p.p-content Por ello el(los) Deudor(es)
+.sign-div
+  .couple-div
+    div(style='width: 50%')
+      table
+        tbody
+          tr
+            td.col-sign f.
+            td ___________________
+          tr
+            td.col-sign Nombre:
+            td #{nombre}
+          tr
+            td.col-sign C&eacute;dula:
+            td #{identificacion}
+    div(style='width: 50%')
+      table
+        tbody
+          tr
+            td.col-sign f.
+            td ___________________
+          tr
+            td.col-sign Nombre:
+            td #{nombreConyuge}
+          tr
+            td.col-sign C&eacute;dula:
+            td #{identificacionConyuge}

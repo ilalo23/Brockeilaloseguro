@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagare casado</title>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    .h-title {
+      text-align: center;
+    }
+    .p-content {
+      font-size: 13px;
+      text-align: justify;
+    }
+    .col-details {
+      width: 50%;
+    }
+    .sign-div {
+      margin-top: 30px;
+      margin-left: 30px;
+      font-size: 13px;
+    }
+    .couple-div {
+      width: 100%;
+      flex-direction: row;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .col-sign {
+      width: 100px;
+    }
+  </style>
+  <body>
+    <h3 class="h-title">PRENDAR ECUADOR CASA DE EMPEÑO</h3>
+    <h4 class="h-title">PAGARÉ A LA ORDEN</h4>
+
+    <table style="width: 100%">
+      <tbody>
+        <tr>
+          <td class="col-details">Pagaré: #{idPrestamo}</td>
+          <td class="col-details">Tasa: #{tasaInteres}%</td>
+        </tr>
+        <tr>
+          <td class="col-details">Solicitud: #{idSolicitud}</td>
+          <td class="col-details">Valor USD: $#{monto}</td>
+        </tr>
+        <tr>
+          <td>Nº. Cliente: #{idCliente}</td>
+          <td>Oficina: #{canton}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="p-content">
+      Debo y pagaré solidaria e incondicionalmente a #{plazoDias} días de la
+      fecha, yo el (la) señor #{nombreDeudor} portador de la cedula de
+      ciudadanía #{identificacion} y el (la) señor(a) #{nombreConyuge}
+      portador(a) de la cédula de ciudadanía #{identificacionConyuge} por mis
+      propios y personales derechos, en esta ciudad, o en el lugar en que se me
+      solicite, a la orden de la Sociedad Civil y de Comercio “PRENDAR ECUADOR
+      CASA DE EMPEÑO SCC” Con RUC. 1792320321001, representada por su Gerente
+      General, la suma de #{montoLetras} ($#{monto}), valor recibido en calidad
+      de Crédito mercantil, en dinero en efectivo y a mi entera satisfacción.
+      Este valor se pagará en dinero efectivo con recursos lícitos que en ningún
+      caso han sido generados por operaciones Ilícitas, especialmente no por
+      aquellas reprimidas por la Ley sobre Sustancias Estupefacientes y
+      Psicotrópicas, eximiendo a la Sociedad Civil y de Comercio “PRENDAR
+      ECUADOR CASA DE EMPEÑO SCC” Con RUC. 1792320321001, de cualquier
+      responsabilidad en la materia. Este valor se pagará el #{fechaPagoLetras}
+      Si el valor del crédito adeudado no fuese pagado al vencimiento, total o
+      parcialmente, la cantidad de capital no pagada devengará intereses de
+      mora. La tasa de interés de mora será la que resulte de aplicar un recargo
+      del 10% (1.1 veces) sobre la tasa de interés efectiva máxima, computado
+      desde el primer día de la mora hasta el día en que se efectúe el pago. El
+      interés de mora se calculará con base en un año de 360 días. Sin perjuicio
+      de ello, en caso de mora de una parte o de la totalidad del crédito, la
+      Sociedad Civil y de “PRENDAR ECUADOR CASA DE EMPEÑO SCC”con RUC.
+      1792320321001, podrá declarar vencida la obligación y proceder al cobro de
+      todos los valores efectivamente adeudados al momento de la mora. El pago
+      se realizará en la fecha de vencimiento del crédito en dólares de los
+      Estados Unidos de América, en fondos de disponibilidad inmediata, libres
+      de y sin deducción alguna por gravámenes, deducciones, cargos o
+      retenciones, salvo aquellas de carácter tributario según la legislación
+      vigente.
+    </p>
+    <p class="p-content">
+      Para caso de juicio, renuncio fuero y domicilio y me someto expresamente a
+      los jueces competentes de la Ciudad de #{ciudad}. Me obligo a pagar las
+      costas y gastos judiciales y/o extrajudiciales que se originasen en el
+      cobro aun antes de sentencia, que sean necesarios para asegurar la
+      legalidad y ejecutoriedad de este Pagaré a la Orden y para recaudar los
+      valores adeudados, incluyendo honorarios legales así como otras perdidas y
+      daños causados por el incumplimiento. El pago no podrá hacerse por partes
+      ni aún por mis herederos o sucesores. Al fiel cumplimiento de lo
+      estipulado me obligo (amos) con todos mis (nuestros) bienes presentes y
+      futuros. Sin protesto. Exímase de presentación para el pago y de aviso por
+      falta de pago.
+    </p>
+    <p class="p-content">#{ciudad}, #{fechaAdjudicacion}</p>
+    <p class="p-content">Por ello el(los) Deudor(es)</p>
+    <div class="sign-div">
+      <div class="couple-div">
+        <div style="width: 50%">
+          <table>
+            <tbody>
+              <tr>
+                <td class="col-sign">f.</td>
+                <td>___________________</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Nombre:</td>
+                <td>#{nombreDeudor}</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Cédula:</td>
+                <td>#{identificacionDeudor}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="width: 50%">
+          <table>
+            <tbody>
+              <tr>
+                <td class="col-sign">f.</td>
+                <td>___________________</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Nombre:</td>
+                <td>#{nombreConyuge}</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Cédula:</td>
+                <td>#{identificacionConyuge}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <p class="p-content">#{ciudad}, #{fechaAdjudicacion}</p>
+    <p class="p-content">Por ello el(los) Deudor(es)</p>
+    <div class="sign-div">
+      <div class="couple-div">
+        <div style="width: 50%">
+          <table>
+            <tbody>
+              <tr>
+                <td class="col-sign">f.</td>
+                <td>___________________</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Nombre:</td>
+                <td>#{nombre}</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Cédula:</td>
+                <td>#{identificacion}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="width: 50%">
+          <table>
+            <tbody>
+              <tr>
+                <td class="col-sign">f.</td>
+                <td>___________________</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Nombre:</td>
+                <td>#{nombreConyuge}</td>
+              </tr>
+              <tr>
+                <td class="col-sign">Cédula:</td>
+                <td>#{identificacionConyuge}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
