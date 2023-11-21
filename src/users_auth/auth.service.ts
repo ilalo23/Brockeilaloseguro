@@ -98,7 +98,6 @@ export class AuthService {
   async generateCode(identification: string): Promise<any> {
     const user = await this.userModel.findOne({
       email: identification,
-      status: 1,
     });
     if (user) {
       const validUntil = dayjs().add(5, "minute");
@@ -129,7 +128,7 @@ export class AuthService {
   }
 
   async validateCode(code: string): Promise<{ accessToken: string }> {
-    const validCode = await this.codeModel.findOne({ code, status: 0 });
+    const validCode = await this.codeModel.findOne({ code });
     if (validCode) {
       await validCode.updateOne({
         update_at: new Date(),
@@ -163,7 +162,7 @@ export class AuthService {
     password: string,
     identification: string
   ): Promise<void> {
-    const profile = await this.userModel.findOne({ identification });
+    const profile = await this.userModel.findOne({ email: identification });
     if (profile) {
       const hashedPassword = await bcrypt.hash(password, 10);
       await profile.updateOne({

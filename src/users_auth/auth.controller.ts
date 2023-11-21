@@ -38,10 +38,15 @@ export class AuthController {
   async updatePassword(
     @Body() authUserdto: AuthUserDto,
     @GetUser() user: User
-  ) {
+  ): Promise<void> {
     const { password } = authUserdto;
-    const { email } = user;
-    await this.authService.updatePassword(password, email);
+    // const { identification } = user;
+
+    // const email = "casaminmaicol8@gmail.com";
+
+    //console.log("*****");
+    //console.log(user¨`'¡.identification);
+    await this.authService.updatePassword(password, user["identification"]);
   }
 
   @Get("")
